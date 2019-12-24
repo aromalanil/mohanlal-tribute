@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,700,800&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600,700&display=swap');
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.nav-color {
+  background-color: #1616db;
+  position: fixed;
+  top:0;
+  width:100%;
+}
+.navbar {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 9vh;
+}
+.nav-links {
+  display: flex;
+  list-style-type: none;
+}
+.logo {
+   font-size:1.3em;
+  color: #f2f1f4;
+  font-weight: 700;
+  text-decoration: none;
+}
+.nav-link {
+  margin-left: 7vw;
+  color: #f2f1f4;
+  text-decoration: none;
+}
+
+.main
+{
+    width:100%;
+    display: grid;
+    grid-template-areas: "i i c c";
+    justify-content: center;
+    
+}
+.img
+{
+    grid-area: 'i';
+    margin-top: 10vh;
+    text-align: center;
+}
+#cover-image
+{
+    height: 90vh;
+}
+#header
+{
+    margin: 10vw;
+    grid-area: 'c';
+    height: 70vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 30vh;
+    margin-bottom: 0;
+    align-items: baseline;
+
+}
+#down_arrow
+{
+    width:5vh;
+    align-self: center;
+    animation: downAnimation 800ms infinite 2s ease-in-out;
+}
+#title,#tagline
+{
+    font-family: 'Montserrat', sans-serif;
+}
+#title
+{
+    line-height: auto;
+    font-size: 6vw;
+    font-weight: 700;
+    padding: 0;
+    color:#110E16;
+}
+#tagline
+{
+    margin-top: -8vh;
+
+    font-size: 2.5vw;
+    font-weight:600;
+    color: #4A4A4A;
+}
+
+@keyframes downAnimation{
+    0%{
+        }
+    50%{
+        transform: translateY(2vh);
+        }
+    100%{
+        transform: rotate(xx) translateY(0vh);
+        }
+}
