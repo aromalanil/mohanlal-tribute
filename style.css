@@ -6,18 +6,17 @@ body {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-#menu > img{
-  height: 5vh;;
+#menu > img {
+  height: 5vh;
 }
-#menu
-{
+#menu {
   background-color: rgba(201, 76, 76, 0);
   border: none;
-  
+  cursor: pointer;
   height: 10vh;
   display: none;
 }
-#menu:focus{
+#menu:focus {
   outline: none;
 }
 .nav-color {
@@ -38,10 +37,13 @@ body {
   display: flex;
   list-style-type: none;
 }
+
 .logo {
-  font-size: 1.3em;
+  font-size: 1em;
   color: #f2f1f4;
   font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
   text-decoration: none;
 }
 .nav-link {
@@ -133,7 +135,7 @@ body {
   width: 100%;
   margin-top: 25%;
 }
-#about-para {
+#tribute-info {
   text-align: justify;
 }
 strong {
@@ -144,61 +146,46 @@ strong {
   width: 86vw;
   margin: auto;
   padding-bottom: 1vh;
-  height:auto;
- 
+  height: auto;
 }
-.timeline-items
-{
-  width:60vw;
+.timeline-items {
+  width: 60vw;
   margin: auto;
   margin-top: 10vh;
 }
-.events
-{
+.events {
   margin: 20px auto 20px auto;
 }
 
-
-.know-color
-{
+.know-color {
   height: 40vh;
-  background-color:rgba(7, 90, 255, 0.377);
-  
+  background-color: rgba(7, 90, 255, 0.377);
 }
-.knowmore
-{
+.knowmore {
   height: 100%;
-  width:86vw;
+  width: 86vw;
   margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-
 }
-.know-title
-{
-  
+.know-title {
   align-self: center;
 }
-.know-links
-{
+.know-links {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
-.know-link
-{
+.know-link {
   width: 10vh;
-  
 }
-.know-link:hover
-{
-  z-index:-1;
+.know-link:hover {
+  z-index: -1;
   transform: scale(1.1) translateY(-10%);
 }
 
-footer
-{
+footer {
   width: 100%;
   display: flex;
   align-items: center;
@@ -219,17 +206,29 @@ footer
   }
 }
 
-
-
 @media only screen and (max-width: 600px) {
-  #menu
-  {
+  #menu {
     display: block;
   }
-  .logo,.nav-links
-  {
-    display: none;
+  .nav-links {
+    position: absolute;
+    top: 9vh;
+    right: 0vh;
+    height: 91vh;
+    background-color: #1616db;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 70vw;
+    margin: auto;
+    transform: translateX(100%);
   }
+
+  .slide-into {
+    transform: translateX(0%);
+  }
+
   .main {
     width: 100%;
     display: grid;
@@ -267,7 +266,7 @@ footer
     line-height: auto;
     font-size: 12vw;
     font-weight: 700;
-  
+
     margin-bottom: 0;
     color: #110e16;
   }
