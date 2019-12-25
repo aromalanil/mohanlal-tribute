@@ -96,6 +96,8 @@ body {
   width: 86vw;
   height: minmax(auto, 100vh);
   margin: auto;
+  padding-top: 20vh;
+  padding-bottom: 20vh;
 }
 .about-content {
   flex: 7;
@@ -127,7 +129,32 @@ strong {
 .timeline {
   width: 86vw;
   margin: auto;
+  padding-bottom: 20vh;
+  height:auto;
 }
+.timeline-items
+{
+  
+  width:60vw;
+  margin: auto;
+  margin-top: 10vh;
+}
+footer
+{
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:  #1616db;
+  color:#f2f1f4;
+  font-family: "Montserrat", sans-serif;
+}
+.events
+{
+  margin: 20px auto 20px auto;
+}
+
 @keyframes downAnimation {
   0% {
   }
@@ -166,7 +193,6 @@ strong {
     justify-content: flex-start;
     margin: auto;
     margin-top: 8vh;
-    padding-top: 4vh;
     align-items: center;
   }
   #down_arrow {
@@ -177,7 +203,7 @@ strong {
     line-height: auto;
     font-size: 12vw;
     font-weight: 700;
-    padding: 0;
+  
     margin-bottom: 0;
     color: #110e16;
   }
@@ -188,7 +214,7 @@ strong {
     color: #4a4a4a;
   }
   .about {
-    margin-top: 7vh;
+    margin-top: 8vh;
   }
 }
 
