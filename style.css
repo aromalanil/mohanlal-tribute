@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:400,700,800&display=swap");
-@import url('https://fonts.googleapis.com/css?family=Montserrat:600,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,600,700,800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:600,700&display=swap");
 body {
   margin: 0;
   padding: 0;
@@ -9,11 +9,11 @@ body {
 .nav-color {
   background-color: #1616db;
   position: fixed;
-  top:0;
-  width:100%;
+  top: 0;
+  width: 100%;
 }
 .navbar {
-  width: 85%;
+  width: 85vw;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -25,7 +25,7 @@ body {
   list-style-type: none;
 }
 .logo {
-   font-size:1.3em;
+  font-size: 1.3em;
   color: #f2f1f4;
   font-weight: 700;
   text-decoration: none;
@@ -36,71 +36,174 @@ body {
   text-decoration: none;
 }
 
-.main
-{
-    width:100%;
+.main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "i c";
+  justify-content: center;
+}
+.cover-div {
+  grid-area: i;
+  margin-top: 10vh;
+  text-align: center;
+}
+#cover-image {
+  margin-bottom: -1vh;
+  height: 90vh;
+}
+#header {
+  grid-area: c;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 30vh;
+  margin-bottom: 0;
+  align-items: baseline;
+}
+#down_arrow {
+  width: 5vh;
+  margin-left: 10vw;
+  z-index: -1;
+  animation: downAnimation 800ms infinite 2s ease-in-out;
+}
+#title,
+#tagline {
+  font-family: "Montserrat", sans-serif;
+}
+#title {
+  line-height: auto;
+  font-size: 6vw;
+  font-weight: 700;
+  padding: 0;
+  color: #110e16;
+}
+#tagline {
+  margin-top: -8vh;
+  font-size: 2.5vw;
+  font-weight: 600;
+  color: #4a4a4a;
+}
+.about-color {
+  width: 100vw;
+  background-color: rgba(7, 90, 255, 0.377);
+}
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 86vw;
+  height: minmax(auto, 100vh);
+  margin: auto;
+}
+.about-content {
+  flex: 7;
+  height: 100%;
+  margin-right: 7vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.img-div {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: -2vw;
+}
+#img {
+  width: 100%;
+  margin-top: 25%;
+}
+#about-para {
+  text-align: justify;
+}
+strong {
+  font-weight: 600;
+}
+
+.timeline {
+  width: 86vw;
+  margin: auto;
+}
+@keyframes downAnimation {
+  0% {
+  }
+  50% {
+    transform: translateY(2vh);
+  }
+  100% {
+    transform: rotate(xx) translateY(0vh);
+  }
+}
+@media only screen and (max-width: 600px) {
+  .main {
+    width: 100%;
     display: grid;
-    grid-template-areas: "i i c c";
-    justify-content: center;
-    
-}
-.img
-{
-    grid-area: 'i';
-    margin-top: 10vh;
-    text-align: center;
-}
-#cover-image
-{
-    height: 90vh;
-}
-#header
-{
-    margin: 10vw;
-    grid-area: 'c';
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "c" "i";
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .cover-div {
+    grid-area: i;
+    margin-top: -8vh;
     height: 70vh;
-    display:flex;
+    text-align: center;
+  }
+  #cover-image {
+    height: 70vh;
+  }
+  #header {
+    width: 100%;
+    grid-area: c;
+    height: auto;
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-top: 30vh;
-    margin-bottom: 0;
-    align-items: baseline;
-
-}
-#down_arrow
-{
-    width:5vh;
-    align-self: center;
-    animation: downAnimation 800ms infinite 2s ease-in-out;
-}
-#title,#tagline
-{
-    font-family: 'Montserrat', sans-serif;
-}
-#title
-{
+    margin: auto;
+    margin-top: 8vh;
+    padding-top: 4vh;
+    align-items: center;
+  }
+  #down_arrow {
+    position: absolute;
+    display: none;
+  }
+  #title {
     line-height: auto;
-    font-size: 6vw;
+    font-size: 12vw;
     font-weight: 700;
     padding: 0;
-    color:#110E16;
+    margin-bottom: 0;
+    color: #110e16;
+  }
+  #tagline {
+    margin-top: 1%;
+    font-size: 6vw;
+    font-weight: 600;
+    color: #4a4a4a;
+  }
+  .about {
+    margin-top: 7vh;
+  }
 }
-#tagline
-{
-    margin-top: -8vh;
 
-    font-size: 2.5vw;
-    font-weight:600;
-    color: #4A4A4A;
-}
-
-@keyframes downAnimation{
-    0%{
-        }
-    50%{
-        transform: translateY(2vh);
-        }
-    100%{
-        transform: rotate(xx) translateY(0vh);
-        }
+@media (max-width: 1000px) {
+  .about {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .about-content {
+    margin: auto;
+  }
+  .img-div {
+    margin: auto;
+  }
+  #img {
+    margin-top: 0;
+  }
 }
