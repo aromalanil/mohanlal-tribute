@@ -6,6 +6,20 @@ body {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+#menu > img{
+  height: 5vh;;
+}
+#menu
+{
+  background-color: rgba(201, 76, 76, 0);
+  border: none;
+  
+  height: 10vh;
+  display: none;
+}
+#menu:focus{
+  outline: none;
+}
 .nav-color {
   background-color: #1616db;
   position: fixed;
@@ -208,6 +222,14 @@ footer
 
 
 @media only screen and (max-width: 600px) {
+  #menu
+  {
+    display: block;
+  }
+  .logo,.nav-links
+  {
+    display: none;
+  }
   .main {
     width: 100%;
     display: grid;
